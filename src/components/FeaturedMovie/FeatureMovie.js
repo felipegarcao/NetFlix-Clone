@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import "./FeatureMovie.css";
 
 function FeatureMovie({ item }) {
@@ -34,10 +35,11 @@ function FeatureMovie({ item }) {
               {item.overview}
             </div>
             <div className="featured--buttons">
-
+              <a href={`/watch/${item.id}`} className="featured--watchbutton"> Assistir</a>
+              <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ Minha Lista</a>
             </div>
             <div className="featured-genres">
-              <strong>Generos</strong><strong>{genres.join(', ')}</strong>
+              <strong>Generos: </strong>{genres.join(', ')}
             </div>
           </div>
         </div>
